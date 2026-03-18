@@ -1,0 +1,25 @@
+pipeline {
+    agent any 
+        stages {
+            stage ("BUILD-STAGE"){
+                steps{
+                    echo "building projects......"
+                 }
+            }
+            stage ("TEST-STAGE"){
+                steps{
+                    echo "TESTING projects......"
+                    }
+            }
+            stage ("DEPLOY-STAGE"){
+                steps{
+                    echo "DEPLOYING projects......"
+                }
+            }
+        }
+	post {
+	 always{
+	 echo "THANK YOU"
+	     }
+	}
+ }
