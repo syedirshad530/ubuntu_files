@@ -3,20 +3,20 @@ pipeline {
         stages {
             stage ("BUILD-STAGE"){
                 steps{
-                    echo "building projects......"
-                    sh "mvn clean"
+                   sh 'echo Building project...'
+                  sh 'mvn clean install'
                  }
             }
             stage ("TEST-STAGE"){
                 steps{
-                    echo "TESTING projects......"
-					 sh "mvn test"
+                    sh 'echo Testing project...'
+                    sh 'mvn test'
                     }
             }
             stage ("DEPLOY-STAGE"){
                 steps{
-                    echo "DEPLOYING projects......"
-					 sh "mvn deploy"
+                   sh 'echo Building project...'
+					 sh 'mvn deploy'
                 }
             }
         }
