@@ -4,19 +4,19 @@ pipeline {
             stage ("BUILD-STAGE"){
                 steps{
                     echo "building projects......"
-                    bat "mvn clean"
+                    sh "mvn clean"
                  }
             }
             stage ("TEST-STAGE"){
                 steps{
                     echo "TESTING projects......"
-					 bat "mvn test"
+					 sh "mvn test"
                     }
             }
             stage ("DEPLOY-STAGE"){
                 steps{
                     echo "DEPLOYING projects......"
-					 bat "mvn deploy"
+					 sh "mvn deploy"
                 }
             }
         }
